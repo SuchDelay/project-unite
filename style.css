@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Animated gradient background */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  background: linear-gradient(-45deg, #0a0f1f, #112240, #1e3a5f, #0a0f1f);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header {
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.logo { font-weight: 700; font-size: 1.4em; }
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+nav a:hover { color: #4fc3f7; }
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+h1 { font-size: 2.5em; text-align: center; margin-bottom: 20px; }
+p { font-size: 1.1em; line-height: 1.6; color: rgba(255, 255, 255, 0.85); }
+footer { text-align: center; padding: 20px; font-size: 0.9em; color: rgba(255, 255, 255, 0.6); margin-top: 40px; }
+
+/* Buttons */
+button {
+  background: rgba(79, 195, 247, 0.2);
+  border: 1px solid rgba(79, 195, 247, 0.5);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background: rgba(79, 195, 247, 0.4);
+}
+
+/* Modals */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  padding: 20px;
+  border-radius: 15px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+.modal-content input, .modal-content select {
+  width: 90%;
+  padding: 8px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+}
+.close {
+  cursor: pointer;
+  float: right;
+  font-size: 18px;
+  color: #fff;
+}
+
+/* Dashboard */
+#dashboard {
+  display: none;
+  padding: 20px;
+}
+.project {
+  background: rgba(255,255,255,0.05);
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+}
